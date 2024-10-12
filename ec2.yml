@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Deploy an EC2 instance in a VPC.
+Resources:
+  myEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      KeyName: AWS-Keypair
+      ImageId: ami-0fff1b9a61dec8a5f  
+      InstanceType: t2.micro
+      Monitoring: true
+      
+      Tags:
+        - Key: Name
+          Value: MyfirstEC2Instance
